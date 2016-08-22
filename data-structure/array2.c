@@ -21,10 +21,14 @@ int main() {
   }
 
   start = clock();
-  n[SIZE] = 1000;
+  for (size_t i = 0; i < SIZE; i++) {
+    n[i+1] = n[i];
+  }
+  n[0] = 1000;
+
   end = clock();
   cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-  printf("Time used in add one element in last of array. %lf\n", cpu_time_used);
+  printf("Time used in add one element in first of array. %lf\n", cpu_time_used);
 
 
   /// Case 2
@@ -37,10 +41,13 @@ int main() {
   }
 
   start2 = clock();
-  n2[SIZE2] = 1000;
+  for (size_t i = 0; i < SIZE2; i++) {
+    n2[i+1] = n2[i];
+  }
+  n2[0] = 1000;
   end2 = clock();
   cpu_time_used2 = ((double) (end2 - start2)) / CLOCKS_PER_SEC;
-  printf("Time used in add one element in last of array. %lf\n", cpu_time_used2);
+  printf("Time used in add one element in first of array. %lf\n", cpu_time_used2);
 
 
   // Case 1 and Case 2 of executing time is same.

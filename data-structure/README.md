@@ -1,4 +1,7 @@
 
+Exercise in various language.
+C, Python, Java, Javascript
+
 # Default template
 
 \#include <stdio.h>

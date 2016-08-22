@@ -51,7 +51,7 @@ int main() {
 
 
   // Case 1 and Case 2 of executing time is same.
-  // It takes time O(1)
+  // It takes time O(n)
 
   return 0;
 

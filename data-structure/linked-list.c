@@ -34,7 +34,10 @@ void printList()
 
 void insertFirst(int key, int data)
 {
+  // node struct의 메모리 크기를 구한 후 메모리를 할당한다.(malloc)
+  // 그 이후에 pointer 형으로 casting 한다.
   struct node *link = (struct node*) malloc(sizeof(struct node));
+  // link의 속성에 접근한다. key, data, next
   link->key = key;
   link->data = data;
   link->next = head;
